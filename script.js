@@ -1,15 +1,15 @@
-function getRandomInteger  (max) { // takes an integer max as an argument and returns a random integer between 0 and max-1
+function getRandomInteger  (max) { 
     return Math.floor(max*Math.random())
 
 }
 
-function getRandomElement (array) { // takes an array as an argument an returns a random element
+function getRandomElement (array) { 
     return array[getRandomInteger (array.length)]
 }
 
 
 
-function getComputerChoice () { // randomly returns "Rock", "Paper" or Scissors
+function getComputerChoice () {
     return getRandomElement(['Rock','Paper','Scissors'])
 }
 
@@ -39,7 +39,7 @@ function capitalize (string) {
 
 
 function calcGameResult (computerSelection,playerSelection) {
-    /*calculates the game result as a number considering 0=Rock,1=Paper and 2=Scissors. Playing a round is equivalent to divide te difference by 3*/
+    /*the number indicates the relative position of computerSelection regarding playerSelection*/
     const playerNumber = toNumber(playerSelection);
     const computerNumber=toNumber(computerSelection);
     const gameResult = modulo(playerNumber-computerNumber,3);
@@ -48,6 +48,7 @@ function calcGameResult (computerSelection,playerSelection) {
 
 
 function playRound (computerSelection, playerSelection) {
+    /*The gameResult is calculated as a number to reduce the number of cases to 3 (vs 9) */
     let gameResult = calcGameResult(computerSelection,playerSelection);
     let message;
     switch(gameResult) {
