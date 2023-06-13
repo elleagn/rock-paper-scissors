@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <script src="script.js"></script>
-</body>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="board">
+      <div class="score">
+        <p class="hidden">ROUND <span id="round-number"></span></p>
+        <p class="hidden">
+          PLAYER <span id="player-score"></span> - COMPUTER
+          <span id="computer-score"></span>
+        </p>
+      </div>
+      <div class="message">
+        <p id="text"></p>
+      </div>
+    </div>
+    <div class="container">
+      <button id="player-rock" class="choice">
+        <img
+          src="images/pngegg.png"
+          alt="it's the rock (it's also Dwayne Johnson)"
+        />
+        <p class="option">ROCK</p>
+      </button>
+      <button id="player-paper" class="choice">
+        <img
+          src="https://files.nohat.cc/file-tmp/visualhunter-cb670a144e.png"
+          alt="a leaf because leaf and paper are the same in french"
+        />
+        <p class="option">PAPER</p>
+      </button>
+      <button id="player-scissors" class="choice">
+        <img
+          src="https://openclipart.org/image/400px/240874"
+          alt="scissors made of scissors (scissorception)"
+        />
+        <p class="option">SCISSORS</p>
+      </button>
+    </div>
+    <button id="start">START</button>
+  </body>
 </html>
